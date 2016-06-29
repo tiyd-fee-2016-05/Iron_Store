@@ -1,0 +1,61 @@
+<div class="container">
+  <header>
+    <h1>Black Cat Temp Tats - Admin</h1>
+  </header>
+<div ng-controller = 'ProductForm'>
+  <table>
+      <tr>
+        <th> Product name </th>
+        <th> Description </th>
+        <th> Image </th>
+        <th> Price </th>
+        <th>  </th>
+        <th>  </th>
+      </tr>
+      <tr ng-repeat = "item in invoice.items">
+        <td> <input type="text" ng-model = "item.name "> </input> </td>
+        <td> <input type="text" ng-model = "item.description"> </input> </td>
+        <td> <input type="text" ng-model = "item.image"> </input> </td>
+        <td> <input type="text" ng-model = "item.price"> </input> </td>
+        <td> <button> Edit </button> </td>
+        <td> <button> Remove </button> </td>
+      </tr>
+      <tr>
+        <td> <a href ng-click="addItem()" class= "btn btn-small" >Add Item</a></td>
+      </tr>
+
+        <!-- <td> <input type="text" value="Item 2"> </input> </td>
+        <td> <input type="text" value="All about Item 2"> </input> </td>
+        <td> <input type="text" value="image.com"> </input> </td>
+        <td> <input type="text" value="price"> </input> </td>
+        <td> <button> Edit </button> </td>
+        <td> <button> Remove </button> </td>
+      </tr>
+      <tr>
+        <td> <input type="text" value="Item 3"> </input> </td>
+        <td> <input type="text" value="All about Item 3"> </input> </td>
+        <td> <input type="text" value="image.com"> </input> </td>
+        <td> <input type="text" value="price"> </input> </td>
+        <td> <button> Edit </button> </td> -->
+        <!-- <td> <button> Remove </button> </td>
+      </tr>
+      <tr>
+        <td> <button> Add new item </button> </td>
+      </tr> -->
+
+    </table>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
