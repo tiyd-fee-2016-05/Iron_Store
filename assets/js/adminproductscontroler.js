@@ -24,3 +24,22 @@ mainApp.controller('ProductForm',['$scope',function($scope){
   }
 
 }]);
+
+// THIS SUCCESSFULL JSON SERVER TEST GET CALL CAN BE USED ON MAIN PRODUCT PAGE //
+// mainApp.controller('myCtrl', function($scope, $http){
+// $http({
+//   method: 'GET',
+//   url: 'http://localhost:3002/db'
+// }).then(function successCallback(response) {
+//   console.log(response);
+// });
+// });
+
+mainApp.controller('myCtrl', function($scope, $http){
+$http({
+  method: 'GET',
+  url: 'http://localhost:3002/db'
+}).then(function successCallback(response) {
+  console.log(response);
+});
+});
