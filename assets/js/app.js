@@ -27,7 +27,7 @@ mainApp.config(function($routeProvider){
   // .when ('/productdetails', {
   //   templateUrl: 'html/productdetails.html',
   //   // controller: 'ProductDetails'
-  // })
+  // }) 
   //
   .when ('/productmain', {
     templateUrl: 'html/productmain.html',
