@@ -20,10 +20,12 @@ table {
   padding: 15px;
   border-collapse: collapse;
   margin: 0 auto;
-  width: 100%; }
+  width: 100%;
+  overflow: scroll; }
 
 th, td {
-  padding: 15px 10px; }
+  padding: 15px 10px;
+  overflow: scroll; }
 
 th {
   border-top: 1px solid black;
@@ -76,5 +78,25 @@ input {
 .savebtn:active {
   background-color: black;
   color: #fff; }
+
+footer {
+  border-top: 1px solid black;
+  position: fixed;
+  width: 85%;
+  bottom: 0 !important; }
+
+.consumer {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  display: inline-block; }
+
+.fa {
+  font-size: 16px; }
+
+.admin {
+  display: inline-block;
+  text-align: center;
+  margin: auto; }
 
 /*# sourceMappingURL=styles-adminproducts.css.map */

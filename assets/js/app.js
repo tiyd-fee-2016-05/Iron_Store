@@ -29,10 +29,10 @@ mainApp.config(function($routeProvider){
   //   // controller: 'ProductDetails'
   // })
   //
-  // .when ('/productmain', {
-  //   templateUrl: 'html/productmain.html',
-  //   // controller: 'ProductMain'
-  // })
+  .when ('/productmain', {
+    templateUrl: 'html/productmain.html',
+    // controller: 'ProductMain'
+  })
   //
   // .when ('/productreceipt', {
   //   templateUrl: 'html/productreceipt.html',
