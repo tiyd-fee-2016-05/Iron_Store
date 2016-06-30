@@ -1,5 +1,6 @@
 // angular.module('myApp').controller('ProductForm', function($scope) {
-var mainApp = angular.module('mainApp');
+// var mainApp = angular.module('mainApp');
+
 mainApp.controller('ProductForm',['$scope',function($scope){
 
   $scope.invoice = {

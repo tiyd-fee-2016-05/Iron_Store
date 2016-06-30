@@ -1,19 +1,38 @@
 
+$font: 'El Messiri', Verdana, sans-serif;
 
+body {
+  font-family: $font;
+}
+
+.container {
+  margin: auto;
+  width: 80%;
+}
 
 h1 {
   font-size: 36px;
   text-align: center;
   padding: 15px;
   border: 1px solid black;
+  background-color: black;
+  color: #fff;
+  margin-bottom: 20px;
 }
 
 table {
+  // margin: auto;
   border: 1px solid black;
+  padding: 15px;
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
 
 }
 
 th, td {
   border: 1px solid black;
   padding: 15px;
+
+
 }
