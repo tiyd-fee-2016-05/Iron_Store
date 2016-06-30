@@ -1,12 +1,97 @@
 $backgroundColor:pink;
 $accentColor:green;
+$fontFam:'El Messiri',sans serif;
 
 .container{
-  margin:10px;
-  border:solid 5px black;
-  border-radius: 15deg;
+  // margin:10px;
+  // border:solid 5px black;
+  // border-radius: 15px;
+  font-family: $fontFam;
+}
+.header{
 }
 
+.title{
+  margin-top:10px;
+  margin-left:10px;
+  padding:15px;
+  font-size: 65px;
+  color:#516C92;
+}
+// navbar styling based on http://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_vertical_active
+.navbar{
+  border:solid 1px #516C92;
+  background:#516C92;
+  margin-bottom: 20px;
+  font-size:25px;
+  }
+
+.navbarButtons{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+.shop{
+  padding:10px;
+  font-size: 25px;
+}
+.instructions{
+  padding:5px;
+  font-size: 25;
+  margin-left: 30%;
+}
+
+  ul {
+  list-style-type: none;
+   margin: 0;
+   padding: 3px;
+   overflow: hidden;
+
+
+}
+
+li {
+    float: left;
+    color: white;
+    text-size:25px;
+}
+
+li a {
+    display: block;
+    padding: 8px;
+    background-color: #516C92;
+    text-decoration: none;
+    color: white;
+    text-size:25px;
+}
+
+li a.active{
+  background-color: #516C92;
+  color:white;
+
+}
+
+li a:hover:not(.active){
+  background-color: #555;
+  color:white;
+  text-decoration: none;
+  float: left;
+
+}
+.catalogItem{
+    border:solid 1px #516C92;
+    border-radius: 5px;
+    padding:10px;
+    // margin-right:20px;
+    // margin-left:20px;
+    color:black;
+    width:100px;
+}
+
+.productThumbnail{
+  width:75px;
+}
 // grid system courtesy of http://www.responsivegridsystem.com/
 /*  SECTIONS  */
 .section {
