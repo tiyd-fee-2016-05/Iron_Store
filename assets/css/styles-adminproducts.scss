@@ -2,7 +2,8 @@
 $font: 'El Messiri', Verdana, sans-serif;
 
 body {
-  font-family: $font;
+  font-family: Helvetica;
+  font-weight: lighter;
 }
 
 .container {
@@ -11,6 +12,7 @@ body {
 }
 
 h1 {
+  font-family: $font;
   font-size: 36px;
   text-align: center;
   padding: 15px;
@@ -46,6 +48,9 @@ input {
 }
 
 .btn-small {
+  font-size: 14px;
+  font-family: Helvetica;
+  font-weight: lighter;
   padding: 5px 10px;
   border: 1px solid black;
   cursor: pointer;
@@ -59,15 +64,34 @@ input {
 }
 
 .removebtn {
-    padding: 5px 10px;
-    border: 1px solid black;
-    cursor: pointer;
-    text-decoration: none;
-    color: black;
-    background-color: #fff;
+  font-size: 14px;
+  font-family: Helvetica;
+  font-weight: lighter;
+  padding: 5px 10px;
+  border: 1px solid black;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  background-color: #fff;
 }
 
 .removebtn:active {
+  background-color: black;
+  color: #fff;
+}
+
+.savebtn {
+  font-size: 14px;
+  font-family: Helvetica;
+  font-weight: lighter;
+  padding: 5px 10px;
+  background-color: #fff;
+  color: black;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.savebtn:active {
   background-color: black;
   color: #fff;
 }

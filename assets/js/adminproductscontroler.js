@@ -44,3 +44,35 @@ $http({
   console.log(response);
 });
 });
+// 
+// mainApp.controller('myCtrl', function($scope, $http){
+//   // $scope.item = {item.name};
+//   $scope.newName = "";
+//   $scope.sendPost = function() {
+//     var data = $.param({
+//       json: JSON.stringify({
+//         name: $scope.newName
+//       })
+//     });
+//     $http.post("http://localhost:3002/db", data).success(function(data, status)
+//     {
+//       $scope.item = data;
+//       console.log(data);
+//   })
+// }
+// })
+
+    // $http({
+    //   method: 'POST',
+    //   url: 'http://localhost:3002/db',
+    //   data: $scope.item
+    // })
+    // .success(function(data) {
+    //   console.log(data);
+    //
+    // })
+    // })
+
+
+
+  // });
