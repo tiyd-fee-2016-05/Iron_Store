@@ -1,0 +1,16 @@
+.shopCartHeader {
+  font-size: 45px;
+  color: grey;
+  font-family: sans-serif;
+  margin-bottom: 20px; }
+
+.navbar {
+  border: solid 1px #516C92;
+  background: #516C92;
+  margin-bottom: 20px; }
+
+.CartForm {
+  padding: 20px;
+  margin-top: 20px; }
+
+/*# sourceMappingURL=styles-productcart.css.map */

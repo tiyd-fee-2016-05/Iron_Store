@@ -1,0 +1,31 @@
+.productTitle {
+  font-size: 45px;
+  color: grey;
+  margin-bottom: 30px;
+  font-family: sans-serif; }
+
+.productDetails {
+  color: grey;
+  font-family: sans-serif;
+  display: block;
+  font-size: 30px; }
+
+.productFullSize {
+  height: 400px;
+  margin-left: 50%;
+  margin-top: -180px;
+  display: inline-block; }
+
+a {
+  text-decoration: none;
+  color: white; }
+
+.addToCart {
+  background-color: #5AA77A;
+  margin-top: 30px;
+  padding: 14px 25px;
+  text-align: center;
+  display: inline-block;
+  font-size: 25px; }
+
+/*# sourceMappingURL=styles-productdetails.css.map */
