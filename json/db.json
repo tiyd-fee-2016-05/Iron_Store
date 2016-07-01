@@ -1,6 +1,6 @@
 {
   "items": [
-    { "name": "Black Cat", "description": "Your standard black cat temporary tattoo", "price": 1.50 }, {"name": "Sassy Black Cat", "description": "This is one sassy tattoo", "price": 2.25}, {"name": "Arched Back Cat", "description": "Classic cat pose, classic temp tattoo", "price": 1.75}
+    { "id": 1, "name": "Black Cat", "description": "Your standard black cat temporary tattoo", "price": 1.50 }, {"id": 2, "name": "Sassy Black Cat", "description": "This is one sassy tattoo", "price": 2.25}, {"id": 3, "name": "Arched Back Cat", "description": "Classic cat pose, classic temp tattoo", "price": 1.75}
   ]
 
 }

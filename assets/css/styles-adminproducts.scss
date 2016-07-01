@@ -2,15 +2,17 @@
 $font: 'El Messiri', Verdana, sans-serif;
 
 body {
-  font-family: $font;
+  font-family: Helvetica;
+  font-weight: lighter;
 }
 
 .container {
   margin: auto;
-  width: 80%;
+  width: 85%;
 }
 
 h1 {
+  font-family: $font;
   font-size: 36px;
   text-align: center;
   padding: 15px;
@@ -21,18 +23,94 @@ h1 {
 }
 
 table {
-  // margin: auto;
-  border: 1px solid black;
   padding: 15px;
-  table-layout: fixed;
-  width: 100%;
+  // table-layout: fixed;
   border-collapse: collapse;
-
+  margin: 0 auto;
+  width: 100%;
+  overflow: scroll;
 }
 
 th, td {
+  // border: 1px solid black;
+  padding: 15px 10px;
+  overflow: scroll;
+}
+
+th {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+input {
+  padding: 5px 10px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.btn-small {
+  font-size: 14px;
+  font-family: Helvetica;
+  font-weight: lighter;
+  padding: 5px 10px;
   border: 1px solid black;
-  padding: 15px;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
 
+.btn-small:active {
+  background-color: black;
+  color: #fff;
+}
 
+.removebtn {
+  font-size: 14px;
+  font-family: Helvetica;
+  font-weight: lighter;
+  padding: 5px 10px;
+  border: 1px solid black;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  background-color: #fff;
+}
+
+.removebtn:active {
+  background-color: black;
+  color: #fff;
+}
+
+.savebtn {
+  font-size: 14px;
+  font-family: Helvetica;
+  font-weight: lighter;
+  padding: 5px 10px;
+  background-color: #fff;
+  color: black;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.savebtn:active {
+  background-color: black;
+  color: #fff;
+}
+
+footer {
+  border-top: 1px solid black;
+  position: fixed;
+  width: 85%;
+  bottom: 0 !important;
+}
+
+.consumer {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.fa {
+  font-size: 16px;
 }

@@ -15,16 +15,21 @@
         <th>  </th>
         <th>  </th>
       </tr>
-      <tr ng-repeat = "item in invoice.items">
-        <td> <input type="text" ng-model = "item.name "> </input> </td>
+      <tr ng-repeat = "item in invoice.items | limitTo: 7">
+        <td> <input type="text" ng-model = "item.name"> </input> </td>
         <td> <input type="text" ng-model = "item.description"> </input> </td>
         <td> <input type="text" ng-model = "item.image"> </input> </td>
         <td> <input type="text" ng-model = "item.price"> </input> </td>
-        <td> <button> Edit </button> </td>
-        <td> <button> Remove </button> </td>
+        <!-- <td> <button> Edit </button> </td> -->
+        <td> <button class="removebtn" ng-click="removeItem()"> Remove </button> </td>
       </tr>
       <tr>
         <td> <a href ng-click="addItem()" class= "btn btn-small" >Add Item</a></td>
+        <td>
+          <form ng-submit="sendPost()">
+            <button class="savebtn" ng-click="saveItem()">Save</button>
+          </form>
+        </td>
       </tr>
 
 
@@ -52,6 +57,9 @@
   <div ng-controller = "myCtrl">
   </div>
 
+  <footer>
+    <a href="#/productmain"><button class="savebtn consumer"><i class="fa fa-angle-left" aria-hidden="true"></i> Consumer View</button></a>
+  </footer>
 
 
 
