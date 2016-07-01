@@ -25,6 +25,7 @@ mainApp.config(function($routeProvider){
     // controller: 'ProductCart'
   })
   //
+
   .when ('/productdetails', {
     templateUrl: 'html/productdetails.html',
       css: 'assets/css/styles-productdetails.css'
@@ -34,6 +35,7 @@ mainApp.config(function($routeProvider){
   .when ('/productmain', {
     templateUrl: 'html/productmain.html',
     css: 'assets/css/styles-productmain.css'
+
     // controller: 'ProductMain'
   })
   //
