@@ -23,6 +23,9 @@ mainApp.controller('ProductForm',['$scope',function($scope){
   $scope.removeItem = function(index){
     $scope.invoice.items.splice(index,1);
   }
+}]);
+
+mainApp.controller('PostInfo', function ($scope, $http){
 
   $scope.saveItem = function(){
 
@@ -35,15 +38,16 @@ mainApp.controller('ProductForm',['$scope',function($scope){
     }] }
     console.log(dataStuff);
 
-    // $http.post("http://localhost:3002/items", dataStuff).success(function(dataStuff) {
-    // console.log(dataStuff);
-    // })
+    $http.post("http://localhost:3002/items", dataStuff).success(function(dataStuff) {
+    console.log(dataStuff);
+    })
 
   }
+});
 
 
 
-}]);
+
 
 // THIS SUCCESSFULL JSON SERVER TEST GET CALL CAN BE USED ON MAIN PRODUCT PAGE //
 mainApp.controller('myCtrl', function($scope, $http){
