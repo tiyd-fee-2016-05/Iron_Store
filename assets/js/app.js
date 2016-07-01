@@ -19,18 +19,23 @@ mainApp.config(function($routeProvider){
   //   // controller: 'AdminEditProduct'
   // })
   //
-  // .when ('/productcart', {
-  //   templateUrl: 'html/productcart.html',
-  //   // controller: 'ProductCart'
-  // })
+  .when ('/productcart', {
+    templateUrl: 'html/productcart.html',
+      css: 'assets/css/styles-productcart.css'
+    // controller: 'ProductCart'
+  })
   //
-  // .when ('/productdetails', {
-  //   templateUrl: 'html/productdetails.html',
-  //   // controller: 'ProductDetails'
-  // })
-  //
+
+  .when ('/productdetails', {
+    templateUrl: 'html/productdetails.html',
+      css: 'assets/css/styles-productdetails.css'
+    // controller: 'ProductDetails'
+  })
+
   .when ('/productmain', {
     templateUrl: 'html/productmain.html',
+    css: 'assets/css/styles-productmain.css'
+
     // controller: 'ProductMain'
   })
   //
