@@ -51,6 +51,15 @@ mainApp.controller('SaveForm', function ($scope, $http){
     $http.post("http://localhost:3002/items", dataStuff).success(function(dataStuff) {
     console.log(dataStuff);
     })
+
+
+
+
+
+
+
+
+    
 }
 });
 

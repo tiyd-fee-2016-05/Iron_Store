@@ -34,7 +34,8 @@ mainApp.config(function($routeProvider){
 
   .when ('/productmain', {
     templateUrl: 'html/productmain.html',
-    css: 'assets/css/styles-productmain.css'
+    css: 'assets/css/styles-productmain.css',
+    controller: 'MainGet'
 
     // controller: 'ProductMain'
   })

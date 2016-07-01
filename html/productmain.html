@@ -12,17 +12,17 @@
   </header>
   <div class='shop'> Temporary Tatoos of black cats...mostly.  <br>Prowl through our purr-fect choices.</div>
   <div class='instructions'>Click thumbnail for product details.</div>
-<div class="section group">
+<div class="section group" ng-controller="MainGet">
 	<div class="col span_1_of_3">
-    <ul>
-      <li class='catalogItem'><img class= 'productThumbnail' src="http://image.flaticon.com/icons/svg/61/61637.svg"></li>
-      <li class='catalogItem'><img class= 'productThumbnail' src="http://image.flaticon.com/icons/svg/61/61624.svg"></li>
-      <li class='catalogItem'><img class= 'productThumbnail' src="http://image.flaticon.com/icons/svg/30/30209.svg"></li>
-      <li class='catalogItem'><img class= 'productThumbnail' src="http://image.flaticon.com/icons/svg/81/81323.svg"></li>
-      <li class='catalogItem'><img class= 'productThumbnail' src="http://image.flaticon.com/icons/svg/61/61665.svg"></li>
-      <li class='catalogItem'><img class= 'productThumbnail' src="http://image.flaticon.com/icons/svg/12/12160.svg"></li>
-      <li class='catalogItem'><img class= 'productThumbnail' src="http://image.flaticon.com/icons/svg/12/12430.svg"></li>
-      <li class='catalogItem'><img class= 'productThumbnail' src="http://image.flaticon.com/icons/svg/61/61624.svg"></li>
+    <ul ng-repeat="product in dataStuff">
+      <li class='catalogItem'><img class= 'productThumbnail' ng-src="{{product}}"></li>
+      <li class='catalogItem'><img class= 'productThumbnail' src=""></li>
+      <li class='catalogItem'><img class= 'productThumbnail' src=""></li>
+      <li class='catalogItem'><img class= 'productThumbnail' src=""></li>
+      <li class='catalogItem'><img class= 'productThumbnail' src=""></li>
+      <li class='catalogItem'><img class= 'productThumbnail' src=""></li>
+      <li class='catalogItem'><img class= 'productThumbnail' src=""></li>
+      <li class='catalogItem'><img class= 'productThumbnail' src=""></li>
     </ul>
 	</div>
 	<div class="col span_1_of_3">

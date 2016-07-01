@@ -1,27 +1,9 @@
 {
   "items": [
     {
-      "id": 1,
-      "name": "Black Cat",
-      "description": "Your standard black cat temporary tattoo",
-      "price": 1.5
-    },
-    {
-      "id": 2,
-      "name": "Sassy Black Cat",
-      "description": "This is one sassy tattoo",
-      "price": 2.25
-    },
-    {
-      "id": 3,
-      "name": "Arched Back Cat",
-      "description": "Classic cat pose, classic temp tattoo",
-      "price": 1.75
-    },
-    {
       "name": "asdf",
-      "description": "",
-      "image": "",
+      "description": "yerwywe",
+      "image": "plpl",
       "price": 0,
       "id": 4
     },
@@ -34,10 +16,24 @@
     },
     {
       "name": "Item 2",
-      "description": "",
-      "image": "",
+      "description": "asdf",
+      "image": "qwe",
       "price": 0,
       "id": 6
+    },
+    {
+      "name": "Test item",
+      "description": "THis is a test",
+      "image": "http://image.flaticon.com/icons/svg/30/30209.svg",
+      "price": 5,
+      "id": 7
+    },
+    {
+      "name": "Black Cat #1",
+      "description": "Black cat tattoo",
+      "image": "http://image.flaticon.com/icons/svg/61/61624.svg",
+      "price": 1.25,
+      "id": 8
     }
   ]
 }
