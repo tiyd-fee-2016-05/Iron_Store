@@ -25,25 +25,36 @@ mainApp.controller('ProductForm',['$scope',function($scope){
   }
 }]);
 
-mainApp.controller('PostInfo', function ($scope, $http){
+mainApp.controller('SaveForm', function ($scope, $http){
 
   $scope.saveItem = function(){
 
     for (var i = 0; i < $scope.invoice.items.length; i++) {
-    dataStuff = [{
+      var a = [];
+      dataStuff = {
       'name': $scope.invoice.items[i].name,
       'description': $scope.invoice.items[i].description,
       'image': $scope.invoice.items[i].image,
       'price': $scope.invoice.items[i].price
-    }] }
-    console.log(dataStuff);
+    };
+
+    // while( i < dataStuff.length) {
+    // a.push(dataStuff);
+    // break;
+    // }
+    // console.log(a);
+    console.log($scope.invoice.items.length);
+  }
+    console.log(dataStuff); // $http this //
+    console.log(a);
 
     $http.post("http://localhost:3002/items", dataStuff).success(function(dataStuff) {
     console.log(dataStuff);
     })
-
-  }
+}
 });
+
+ // });
 
 
 
