@@ -85,6 +85,11 @@ body {
    overflow: hidden;
 }
 
+.imagelink {
+  display: block;
+  width: 100px;
+}
+
 // li {
 //     float: left;
 //     color: white;
@@ -123,11 +128,17 @@ body {
     width:100px;
 }
 
+.catalogItem:hover {
+  background-color: #516C92;
+  color: white;
+}
+
 .productThumbnail{
   width:75px;
   margin: 0 auto;
 
 }
+
 // grid system courtesy of http://www.responsivegridsystem.com/
 /*  SECTIONS  */
 .section {

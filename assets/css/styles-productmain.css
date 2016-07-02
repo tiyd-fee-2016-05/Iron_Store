@@ -59,12 +59,20 @@ body {
   padding: 3px;
   overflow: hidden; }
 
+.imagelink {
+  display: block;
+  width: 100px; }
+
 .catalogItem {
   border: solid 1px #516C92;
   border-radius: 5px;
   padding: 10px;
   color: black;
   width: 100px; }
+
+.catalogItem:hover {
+  background-color: #516C92;
+  color: white; }
 
 .productThumbnail {
   width: 75px;
