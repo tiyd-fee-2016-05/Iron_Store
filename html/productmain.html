@@ -12,10 +12,10 @@
   </header>
   <div class='shop'> Temporary Tattoos of black cats...mostly.  <br>Prowl through our purr-fect choices.</div>
   <div class='instructions'>Click thumbnail for product details.</div>
-<div class="section group" ng-controller="MainGet">
+<div class="section group" ng-controller="MainGet" ng-repeat="product in products.items | limitTo: 3 ">
 	<div class="col span_1_of_3">
-    <ul ng-model= "products">
-      <li class='catalogItem'><img class= 'productThumbnail' ng-src="{{products.items[0].image}}"></li>
+    <ul>
+      <li class='catalogItem'><a href="#/productdetails" class="imagelink"><img class= 'productThumbnail' ng-src="{{product.image}}"></a></li>
       <!-- <li class='catalogItem'><img class= 'productThumbnail' src="{{dataStuff}}"></li>
       <li class='catalogItem'><img class= 'productThumbnail' src=""></li>
       <li class='catalogItem'><img class= 'productThumbnail' src=""></li>
@@ -27,7 +27,7 @@
 	</div>
 	<div class="col span_1_of_3">
     <ul>
-      <li class='catalogItem'><img class= 'productThumbnail'src="http://image.flaticon.com/icons/svg/61/61637.svg" ></li>
+      <li class='catalogItem'><img class= 'productThumbnail'src="{{product.image}}" ></li>
       <!-- <li class='catalogItem'><img class= 'productThumbnail' src="http://image.flaticon.com/icons/svg/107/107972.svg"></li>
       <li class='catalogItem'><img class= 'productThumbnail' src="http://image.flaticon.com/icons/svg/61/61665.svg"></li>
       <li class='catalogItem'><img class= 'productThumbnail' src="http://image.flaticon.com/icons/svg/12/12321.svg"></li>
@@ -42,7 +42,7 @@
       <li class='catalogItem'><img class= 'productThumbnail' src="http://image.flaticon.com/icons/svg/61/61637.svg"></li>
       <li class='catalogItem'><img class= 'productThumbnail' src="http://image.flaticon.com/icons/svg/61/61637.svg"></li>
       <li class='catalogItem'><img class= 'productThumbnail' src="http://image.flaticon.com/icons/svg/61/61637.svg"></li>
-      <li class='catalogItem'><img class= 'productThumbnail' src="http://image.flaticon.com/icons/svg/61/61637.svg"></li>
+      <li class='catalogItem'><img class= 'productThumbnail' src="http://image.flaticon.com/icons/svg/61/61637.svg"></li> -->
 
   </ul>
 	</div>
