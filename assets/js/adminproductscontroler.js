@@ -29,13 +29,16 @@ mainApp.controller('PostInfo', function ($scope, $http){
 
   $scope.saveItem = function(){
 
-    for (var i = 0; i < $scope.invoice.items.length; i++) {
+    // for (var i = 0; i < $scope.invoice.items.length; i++) {
     dataStuff = [{
       'name': $scope.invoice.items[i].name,
       'description': $scope.invoice.items[i].description,
       'image': $scope.invoice.items[i].image,
       'price': $scope.invoice.items[i].price
     }] }
+  //   if (i < $scope.invoice.items.length) {
+  //      dataStuff.push(dataStuff[i].value);
+  //  }
     console.log(dataStuff);
 
     $http.post("http://localhost:3002/items", dataStuff).success(function(dataStuff) {
