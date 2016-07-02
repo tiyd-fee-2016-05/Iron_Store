@@ -1,5 +1,11 @@
+body {
+  margin: auto;
+  width: 85%; }
+
 .container {
-  font-family: "El Messiri", sans serif; }
+  font-family: "El Messiri", sans serif;
+  margin: auto;
+  width: 85%; }
 
 .title {
   margin-top: 10px;
@@ -74,10 +80,7 @@
 .col {
   display: block;
   float: left;
-  margin: 1% 0 1% 1.6%; }
-
-.col:first-child {
-  margin-left: 0; }
+  margin: 5px; }
 
 /*  GROUPING  */
 .group:before,

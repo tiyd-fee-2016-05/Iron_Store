@@ -2,11 +2,17 @@ $backgroundColor:pink;
 $accentColor:green;
 $fontFam:'El Messiri',sans serif;
 
+body {
+  margin: auto;
+  width: 85%;
+}
 .container{
   // margin:10px;
   // border:solid 5px black;
   // border-radius: 15px;
   font-family: $fontFam;
+  margin: auto;
+  width: 85%;
 }
 .header{
 }
@@ -29,6 +35,7 @@ $fontFam:'El Messiri',sans serif;
       float: left;
       color: white;
       text-size:25px;
+
   }
 
   li a {
@@ -127,15 +134,17 @@ $fontFam:'El Messiri',sans serif;
 	clear: both;
 	padding: 0px;
 	margin: 0px;
+
 }
 
 /*  COLUMN SETUP  */
 .col {
 	display: block;
 	float:left;
-	margin: 1% 0 1% 1.6%;
+	// margin: 1% 0 1% 1.6%;
+  margin: 5px;
 }
-.col:first-child { margin-left: 0; }
+// .col:first-child { margin-left: 0; }
 
 
 /*  GROUPING  */
