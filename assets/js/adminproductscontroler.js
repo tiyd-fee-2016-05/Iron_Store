@@ -49,7 +49,22 @@ $scope.addItem = function(){
 }
 
 $scope.removeItem = function(index){
-    $scope.products.items.splice(index,1);
+
+  // $http({
+  //   method: 'GET',
+  //   url: 'http://localhost:3002/items'
+  // }).then(function successCallback(response) {
+  //   var itemID = $scope.products.items[0].id;
+  //   console.log(itemID);
+  //   console.log(response);
+  // });
+
+    $http({
+      method: 'DELETE',
+      url: 'http://localhost:3002/items/' + (1)
+    }).then(function successCallback(response) {
+      $scope.products.items.splice(index,-1);
+    });
 
     console.log($scope.products.items.splice(index,1));
     console.log(index);

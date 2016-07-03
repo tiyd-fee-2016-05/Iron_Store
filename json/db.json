@@ -8,13 +8,6 @@
       "id": 4
     },
     {
-      "name": "New Item",
-      "description": "Description of the thing",
-      "image": "http://image.flaticon.com/icons/svg/61/61665.svg",
-      "price": 10,
-      "id": 5
-    },
-    {
       "name": "Item 2",
       "description": "asdf",
       "image": "http://image.flaticon.com/icons/svg/12/12160.svg",
