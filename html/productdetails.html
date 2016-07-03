@@ -9,6 +9,14 @@
       </ul>
     </div>
   </header>
+  <!-- experimental code below -->
+
+<div class="albumDetail" ng-repeat="product in products.items | filter: {id: thisAlbum???????}">
+  <img class='productFullSize'>{{product.image}}>
+  <h2 class='productDetails'>{{product.description}}</h2>
+  <h2 class='productDetails'>{{product.price}}</h2>
+</div>
+  <!-- experimental code above -->
   <h2 class='productTitle'> Happy Cat Head</h1>
   <h2 class='productDetails'>Realistic Details</h2>
   <h2 class='productDetails'>Actual height - 2"</h2>

@@ -1,5 +1,7 @@
 .container {
-  font-family: "El Messiri", sans serif; }
+  margin: auto;
+  font-family: "El Messiri", sans serif;
+  width: 85%; }
 
 .title {
   margin-top: 10px;
@@ -10,7 +12,7 @@
 
 .navbar {
   border: solid 1px #516C92;
-  background: #516C92;
+  background-color: #516C92;
   margin-bottom: 20px;
   font-size: 25px;
   height: 40px; }
@@ -60,8 +62,16 @@
   color: black;
   width: 100px; }
 
+.catalogItem:hover {
+  background-color: #516C92; }
+
+.imagelink {
+  display: block;
+  width: 100px; }
+
 .productThumbnail {
   width: 75px;
+  display: block;
   margin: 0 auto; }
 
 /*  SECTIONS  */
@@ -74,10 +84,7 @@
 .col {
   display: block;
   float: left;
-  margin: 1% 0 1% 1.6%; }
-
-.col:first-child {
-  margin-left: 0; }
+  margin: 5px; }
 
 /*  GROUPING  */
 .group:before,

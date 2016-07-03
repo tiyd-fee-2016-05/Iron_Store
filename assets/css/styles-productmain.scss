@@ -3,10 +3,11 @@ $accentColor:green;
 $fontFam:'El Messiri',sans serif;
 
 .container{
-  // margin:10px;
+  margin:auto;
   // border:solid 5px black;
   // border-radius: 15px;
   font-family: $fontFam;
+  width:85%;
 }
 .header{
 }
@@ -21,7 +22,7 @@ $fontFam:'El Messiri',sans serif;
 // navbar styling based on http://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_vertical_active
 .navbar{
   border:solid 1px #516C92;
-  background:#516C92;
+  background-color:#516C92;
   margin-bottom: 20px;
   font-size:25px;
   height: 40px;

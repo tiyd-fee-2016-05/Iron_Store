@@ -1,41 +1,85 @@
 // angular.module('myApp').controller('ProductForm', function($scope) {
 // var mainApp = angular.module('mainApp');
 
-mainApp.controller('ProductForm',['$scope',function($scope){
+// mainApp.controller('ProductForm',['$scope',function($scope){
+//
+//   // DEFINES THE OBJECT & SCOPE WE'RE WORKING WITH? //
+//   $scope.invoice = {
+//     items: [{
+//       name: '',
+//       description: '',
+//       image: '',
+//       price: 0}]
+//   };
+//
+//   // ADDS NEW ROW WITH BLANK TEXT VALUES //
+//   $scope.addItem = function(){
+//     $scope.invoice.items.push({
+//       name: '',
+//       description: '',
+//       image: '',
+//       price: 0
+//     });
+//   },
+//
+//   // REMOVES CURRENT ROW //
+//   $scope.removeItem = function(index){
+//     $scope.invoice.items.splice(index,1);
+//     // do an $http remove call here ? //
+//   }
+// }]);
 
-  $scope.invoice = {
-    items: [{
-      name: '',
-      description: '',
-      image: '',
-      price: 0}]
-  };
 
-  $scope.addItem = function(){
-    $scope.invoice.items.push({
-      name: '',
-      description: '',
-      image: '',
-      price: 0
-    });
-  },
+mainApp.controller('myCtrl', function($scope, $http){
+$http({
+  method: 'GET',
+  url: 'http://localhost:3002/db'
+}).then(function successCallback(response) {
+  $scope.products = response.data;
+  console.log($scope.products);
+});
 
-  $scope.removeItem = function(index){
-    $scope.invoice.items.splice(index,1);
+$scope.addItem = function(){
+  $scope.products.items.push({
+    name: '',
+    description: '',
+    image: '',
+    price: 0
+  });
+}
+// ..................
+// var arr = $scope.products.items
+// function removeByValue(arr, val) {
+// 	for(var i=0; i<arr.length; i++) {
+// 		if(arr[i] == val) {
+// 			arr.splice(i, 1);
+// 			break;
+// 		}
+// 	}
+// }
+// ....................
+$scope.removeItem = function(index){
+    $scope.products.items.splice(index,1);
+
+    console.log($scope.products.items.splice(index,1));
+    console.log(index);
+    // do an $http remove call here ? //
   }
-}]);
+});
+
+
 
 mainApp.controller('SaveForm', function ($scope, $http){
 
   $scope.saveItem = function(){
 
-    for (var i = 0; i < $scope.invoice.items.length; i++) {
+    for (var i = 0; i < $scope.products.items.length; i++) {
       var a = [];
       dataStuff = {
-      'name': $scope.invoice.items[i].name,
-      'description': $scope.invoice.items[i].description,
-      'image': $scope.invoice.items[i].image,
-      'price': $scope.invoice.items[i].price
+      'name': $scope.products.items[i].name,
+      'description': $scope.products.items[i].description,
+      'image': $scope.products.items[i].image,
+      'price': $scope.products.items[i].price
     };
 
     // while( i < dataStuff.length) {
@@ -43,7 +87,8 @@ mainApp.controller('SaveForm', function ($scope, $http){
     // break;
     // }
     // console.log(a);
-    console.log($scope.invoice.items.length);
+    console.log($scope.products.items.length);
+    // console.log($scope.products.items[i].name);
   }
     console.log(dataStuff); // $http this //
     console.log(a);
@@ -51,15 +96,6 @@ mainApp.controller('SaveForm', function ($scope, $http){
     $http.post("http://localhost:3002/items", dataStuff).success(function(dataStuff) {
     console.log(dataStuff);
     })
-
-
-
-
-
-
-
-
-
 }
 });
 
@@ -70,15 +106,6 @@ mainApp.controller('SaveForm', function ($scope, $http){
 
 
 // THIS SUCCESSFULL JSON SERVER TEST GET CALL CAN BE USED ON MAIN PRODUCT PAGE //
-mainApp.controller('myCtrl', function($scope, $http){
-$http({
-  method: 'GET',
-  url: 'http://localhost:3002/db'
-}).then(function successCallback(response) {
-  console.log(response);
-});
-});
-
 
 
 
