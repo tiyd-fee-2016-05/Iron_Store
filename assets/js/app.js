@@ -6,7 +6,7 @@ mainApp.config(function($routeProvider){
   .when ('/adminproducts', {
     templateUrl: 'html/adminproducts.html',
     css: 'assets/css/styles-adminproducts.css',
-    controller: 'ProductForm'
+    controller: 'myCtrl'
   })
 
   // .when ('/adminaddproduct', {
