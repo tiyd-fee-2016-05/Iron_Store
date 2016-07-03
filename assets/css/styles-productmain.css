@@ -1,6 +1,10 @@
-.container {
+body {
   margin: auto;
+  width: 85%; }
+
+.container {
   font-family: "El Messiri", sans serif;
+  margin: auto;
   width: 85%; }
 
 .title {
@@ -55,6 +59,10 @@
   padding: 3px;
   overflow: hidden; }
 
+.imagelink {
+  display: block;
+  width: 100px; }
+
 .catalogItem {
   border: solid 1px #516C92;
   border-radius: 5px;
@@ -69,10 +77,15 @@
   display: block;
   width: 100px; }
 
+.catalogItem:hover {
+  background-color: #516C92;
+  color: white; }
+
 .productThumbnail {
   width: 75px;
   display: block;
-  margin: 0 auto; }
+  margin: 0 auto;
+  display: block; }
 
 /*  SECTIONS  */
 .section {

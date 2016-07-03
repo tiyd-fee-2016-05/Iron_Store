@@ -15,7 +15,6 @@
 <div class="section group" ng-controller="MainGet">
 	<div class="col span_1_of_3" ng-repeat="product in products.items">
     <ul>
-      <!-- added /{{product.id}} to line below -->
       <a href="#/productdetails/{{product.id}}" class="imagelink"><li class='catalogItem'><img class= 'productThumbnail' ng-src="{{product.image}}"></li></a>
       <!-- <li class='catalogItem'><img class= 'productThumbnail' src="{{dataStuff}}"></li>
       <li class='catalogItem'><img class= 'productThumbnail' src=""></li>

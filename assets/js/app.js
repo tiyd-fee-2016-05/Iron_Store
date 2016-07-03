@@ -21,15 +21,15 @@ mainApp.config(function($routeProvider){
   //
   .when ('/productcart', {
     templateUrl: 'html/productcart.html',
-      css: 'assets/css/styles-productcart.css'
+    css: 'assets/css/styles-productcart.css'
     // controller: 'ProductCart'
   })
   //
 
   .when ('/productdetails', {
     templateUrl: 'html/productdetails.html',
-      css: 'assets/css/styles-productdetails.css'
-    // controller: 'ProductDetails'
+    css: 'assets/css/styles-productdetails.css',
+    controller: 'DetailGet'
   })
 
   .when ('/productmain', {
@@ -46,7 +46,7 @@ mainApp.config(function($routeProvider){
   // })
 
   .otherwise({
-        redirectTo: '/adminproducts'
+    redirectTo: '/adminproducts'
     });
 
 });
