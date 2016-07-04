@@ -68,13 +68,8 @@ $scope.removeItem = function(index){
 
       console.log($scope.products.items.splice(index,1));
       console.log(index);
-
-}); // response
-// } // scope
-
-
-    // do an $http remove call here ? //
-  };
+    }); // response
+  }; // scope
 }); // controller
 
 

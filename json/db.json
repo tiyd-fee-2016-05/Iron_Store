@@ -1,13 +1,6 @@
 {
   "items": [
     {
-      "name": "Test item",
-      "description": "THis is a test",
-      "image": "http://image.flaticon.com/icons/svg/30/30209.svg",
-      "price": 5,
-      "id": 7
-    },
-    {
       "name": "Black Cat #1",
       "description": "Black cat tattoo",
       "image": "http://image.flaticon.com/icons/svg/61/61624.svg",
@@ -34,13 +27,6 @@
       "image": "http://image.flaticon.com/icons/svg/23/23401.svg",
       "price": 2.25,
       "id": 11
-    },
-    {
-      "name": "Cat tat new",
-      "description": "Newest",
-      "image": "http://image.flaticon.com/icons/svg/12/12120.svg",
-      "price": 2.5,
-      "id": 12
     }
   ]
 }
