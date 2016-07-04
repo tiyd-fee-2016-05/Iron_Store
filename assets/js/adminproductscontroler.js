@@ -46,6 +46,8 @@ $scope.addItem = function(){
     image: '',
     price: 0
   });
+
+  $("table").animate({ scrollTop: $("table")[0].scrollHeight}, 1000); // auto scroll-down
 }
 
 $scope.removeItem = function(index){
