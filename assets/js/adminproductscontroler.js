@@ -1,3 +1,95 @@
+mainApp.controller('myCtrl', function($scope, $http) {
+    $http({
+        method: 'GET',
+        url: 'http://localhost:3002/db'
+    }).then(function successCallback(response) {
+        $scope.products = response.data;
+        console.log($scope.products);
+    });
+
+    $scope.addItem = function() {
+        $scope.products.items.push({
+            name: '',
+            description: '',
+            image: '',
+            price: 0
+        });
+
+        $("table").animate({
+            scrollTop: $("table")[0].scrollHeight
+        }, 1500); // auto scroll-down
+    }
+
+    $scope.removeItem = function(index) {
+
+            if ($scope.products.items === "undefined") {
+                $scope.products.items.splice(index, -1);
+                console.log($scope.products.items);
+            } else {
+                $http({
+                    method: 'GET',
+                    url: 'http://localhost:3002/items'
+                }).then(function successCallback(response) {
+                    // for (var i = 0; i < response.data.length; i++) {
+                    // if (response == null) {
+                    //   $scope.products.items.splice(index,-1);
+                    // } else {
+                    var itemID = response.data[index].id;
+
+                    console.log(itemID);
+                    console.log(response);
+                    // } // for loop
+                    $http({
+                        method: 'DELETE',
+                        url: 'http://localhost:3002/items/' + (response.data[index].id)
+                    }).then(function successCallback(response) {
+                        $scope.products.items.splice(index, -1);
+                    });
+
+                    console.log($scope.products.items.splice(index, 1));
+                    console.log(index);
+                }); // response
+            }; // else
+        } // scope
+}); // controller
+
+
+mainApp.controller('SaveForm', function($scope, $http) {
+
+    $scope.saveItem = function() {
+
+        for (var i = 0; i < $scope.products.items.length; i++) {
+            var a = [];
+            dataStuff = {
+                'name': $scope.products.items[i].name,
+                'description': $scope.products.items[i].description,
+                'image': $scope.products.items[i].image,
+                'price': $scope.products.items[i].price
+            };
+
+
+            console.log($scope.products.items.length);
+            // console.log($scope.products.items[i].name);
+        }
+        console.log(dataStuff); // $http this //
+        console.log(a);
+
+        $http.post("http://localhost:3002/items", dataStuff).success(function(dataStuff) {
+            console.log(dataStuff);
+        })
+    }
+});
+
+// COMMENTED OUT OLD CODE / ATTEMPTS / TESTING //
+
+// });
+
+// while( i < dataStuff.length) {
+// a.push(dataStuff);
+// break;
+// }
+// console.log(a);
+
 // angular.module('myApp').controller('ProductForm', function($scope) {
 // var mainApp = angular.module('mainApp');
 
@@ -28,98 +120,6 @@
 //     // do an $http remove call here ? //
 //   }
 // }]);
-
-
-mainApp.controller('myCtrl', function($scope, $http){
-$http({
-  method: 'GET',
-  url: 'http://localhost:3002/db'
-}).then(function successCallback(response) {
-  $scope.products = response.data;
-  console.log($scope.products);
-});
-
-$scope.addItem = function(){
-  $scope.products.items.push({
-    name: '',
-    description: '',
-    image: '',
-    price: 0
-  });
-
-  $("table").animate({ scrollTop: $("table")[0].scrollHeight}, 1500); // auto scroll-down
-}
-
-$scope.removeItem = function(index){
-
-  if ($scope.products.items === "undefined") {
-    $scope.products.items.splice(index,-1);
-    console.log($scope.products.items);
-  }
-
-  else {
-  $http({
-    method: 'GET',
-    url: 'http://localhost:3002/items'
-  }).then(function successCallback(response) {
-    // for (var i = 0; i < response.data.length; i++) {
-    // if (response == null) {
-    //   $scope.products.items.splice(index,-1);
-    // } else {
-    var itemID = response.data[index].id;
-
-    console.log(itemID);
-    console.log(response);
-  // } // for loop
-      $http({
-        method: 'DELETE',
-        url: 'http://localhost:3002/items/' + (response.data[index].id)
-      }).then(function successCallback(response) {
-        $scope.products.items.splice(index,-1);
-      });
-
-      console.log($scope.products.items.splice(index,1));
-      console.log(index);
-    }); // response
-  }; // else
-  } // scope
-}); // controller
-
-
-
-mainApp.controller('SaveForm', function ($scope, $http){
-
-  $scope.saveItem = function(){
-
-    for (var i = 0; i < $scope.products.items.length; i++) {
-      var a = [];
-      dataStuff = {
-      'name': $scope.products.items[i].name,
-      'description': $scope.products.items[i].description,
-      'image': $scope.products.items[i].image,
-      'price': $scope.products.items[i].price
-    };
-
-    // while( i < dataStuff.length) {
-    // a.push(dataStuff);
-    // break;
-    // }
-    // console.log(a);
-    console.log($scope.products.items.length);
-    // console.log($scope.products.items[i].name);
-  }
-    console.log(dataStuff); // $http this //
-    console.log(a);
-
-    $http.post("http://localhost:3002/items", dataStuff).success(function(dataStuff) {
-    console.log(dataStuff);
-    })
-}
-});
-
- // });
-
-
 
 
 
@@ -165,4 +165,4 @@ mainApp.controller('SaveForm', function ($scope, $http){
 
 
 
-  // });
+// });
