@@ -46,31 +46,44 @@ $scope.addItem = function(){
     image: '',
     price: 0
   });
+
+  $("table").animate({ scrollTop: $("table")[0].scrollHeight}, 1500); // auto scroll-down
 }
 
 $scope.removeItem = function(index){
 
-  // $http({
-  //   method: 'GET',
-  //   url: 'http://localhost:3002/items'
-  // }).then(function successCallback(response) {
-  //   var itemID = $scope.products.items[0].id;
-  //   console.log(itemID);
-  //   console.log(response);
-  // });
-
-    $http({
-      method: 'DELETE',
-      url: 'http://localhost:3002/items/' + (1)
-    }).then(function successCallback(response) {
-      $scope.products.items.splice(index,-1);
-    });
-
-    console.log($scope.products.items.splice(index,1));
-    console.log(index);
-    // do an $http remove call here ? //
+  if ($scope.products.items === "undefined") {
+    $scope.products.items.splice(index,-1);
+    console.log($scope.products.items);
   }
-});
+
+  else {
+  $http({
+    method: 'GET',
+    url: 'http://localhost:3002/items'
+  }).then(function successCallback(response) {
+    // for (var i = 0; i < response.data.length; i++) {
+    // if (response == null) {
+    //   $scope.products.items.splice(index,-1);
+    // } else {
+    var itemID = response.data[index].id;
+
+    console.log(itemID);
+    console.log(response);
+  // } // for loop
+      $http({
+        method: 'DELETE',
+        url: 'http://localhost:3002/items/' + (response.data[index].id)
+      }).then(function successCallback(response) {
+        $scope.products.items.splice(index,-1);
+      });
+
+      console.log($scope.products.items.splice(index,1));
+      console.log(index);
+    }); // response
+  }; // else
+  } // scope
+}); // controller
 
 
 
