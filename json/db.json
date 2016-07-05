@@ -22,51 +22,46 @@
       "id": 10
     },
     {
-      "name": "Black Cat newer",
-      "description": "Newest black cat tat",
+      "name": "Black Cat 11",
+      "description": "a black cat tat",
       "image": "http://image.flaticon.com/icons/svg/23/23401.svg",
       "price": 2.25,
       "id": 11
     },
     {
-      "name": "asdf",
-      "description": "sadf",
-      "image": "asdf",
-      "price": "0asdf",
+      "name": "Black Cat 12",
+      "description": "black cat",
+      "image": "http://image.flaticon.com/icons/svg/130/130643.svg",
+      "price": 2.25,
       "id": 12
     },
     {
-      "name": "asdf",
-      "description": "sadf",
-      "image": "asdf",
-      "price": "0asdf",
+      "name": "Black Cat 13",
+      "description": "you'll love it",
+      "image": "http://image.flaticon.com/icons/svg/74/74207.svg",
+      "price": 2.25,
       "id": 13
     },
     {
-      "name": "asdf",
-      "description": "sadf",
-      "image": "asdf",
-      "price": "0asdf",
+      "name": "Black Cat 14",
+      "description": "the best one",
+      "image": "http://image.flaticon.com/icons/svg/12/12430.svg",
+      "price": 2.25,
       "id": 14
     },
     {
-      "description": "",
-      "image": "",
-      "price": 0,
+      "name": "Black Cat 15",
+      "description": "it soeaks for itself",
+      "image": "http://image.flaticon.com/icons/svg/12/12160.svg",
+      "price": 2.25,
       "id": 15
     },
     {
-      "description": "",
-      "image": "",
-      "price": 0,
+      "name": "Black Cat 16",
+      "description": "our most recent addition",
+      "image": "http://image.flaticon.com/icons/svg/30/30209.svg",
+      "price": 1.25,
       "id": 16
-    },
-    {
-      "name": "",
-      "description": "",
-      "image": "",
-      "price": 0,
-      "id": 17
     }
   ]
 }
